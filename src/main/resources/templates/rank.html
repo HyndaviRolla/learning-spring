@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Rankings</title>
+</head>
+<body>
+   <table>
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th>Rank  </th>
+            <th>Score</th>
+            <th>Action</th>     
+        </tr>
+    </thead> 
+    
+		<tbody>
+			<tr th:each="student, status : ${students">
+                <td th:text="${student.rank}"></td>
+                <td th:text="${student.name}"></td>
+                <td  th:text="${student.score}"></td>      
+            </tr>
+        </tbody>
+	   
+</body>
+</html>
